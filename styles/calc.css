@@ -1,0 +1,185 @@
+body {
+  background: linear-gradient(124deg, #ff2400, #e81d1d, #e8b71d, #e3e81d, #1de840, #1ddde8, #2b1de8, #dd00f3, #dd00f3);
+  background-size: 1800% 1800%;
+  
+  -webkit-animation: rainbow 10s ease infinite;
+  -z-animation: rainbow 10s ease infinite;
+  -o-animation: rainbow 10s ease infinite;
+    animation: rainbow 10s ease infinite;}
+  
+  @-webkit-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-moz-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @-o-keyframes rainbow {
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+  @keyframes rainbow { 
+      0%{background-position:0% 82%}
+      50%{background-position:100% 19%}
+      100%{background-position:0% 82%}
+  }
+
+.my-container {
+    display: flex;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.calculator-body {
+    display: flex;
+    width: fit-content;
+    height: fit-content;
+    max-width: 241px;
+    justify-content: center;
+    padding: 20px 15px 10px 15px;
+    background-color: maroon;
+    border: 1px solid maroon;
+	border-radius: 5px;
+	box-shadow: rgba(0,0,0,0.4) 0px 2px 5px, inset rgba(255,255,255,0.9) 0px 1px 1px -1px;
+	background-image: -webkit-linear-gradient(top, blue, maroon, rgb(117, 199, 234));
+    /* background-image: linear-gradient(top, orange, #1f1f1f); */
+}
+
+.calculator-container {
+    box-sizing: border-box;
+    display: grid;
+    grid-gap: 3px;
+    grid-template-columns: repeat(4, minmax(50px, 1fr));
+    grid-template-rows: repeat(6, minmax(50px, 1fr));
+    grid-template-areas:
+        "display display display display"
+        "clear backspace plus minus"
+        "one two three mult"
+        "four five six div"
+        "seven eight nine equal"
+        "zero zero dot equal";
+}
+
+.calculator-container > .my-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    user-select: none;
+    border-radius: 4px;
+    color: #c0c0c0;
+    background-color: #2f2f2f;
+    border: 1px solid maroon;
+    /* box-shadow: inset rgba(255,255,255,0.1) 0px 1px 0px, inset rgba(0,0,0,0.2) 0px -2px 2px;
+    background-image: -webkit-linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%);
+    background-image: linear-gradient(top, #363636 0%, #313234 40%, #2f2f2f 100%); */
+}
+
+.calculator-container > .my-button:hover {
+    background-image: -webkit-linear-gradient(top, #303030 0%, #3f3f3f 100%);
+    background-image: linear-gradient(top, #303030 0%, #3f3f3f 100%);
+    cursor: pointer;
+}
+
+.calculator-container > .my-button:active {
+    box-shadow: inset rgba(0,0,0,0.5) 0px 2px 8px;
+	background-image: -webkit-linear-gradient(top, #2f2f2f 0%, #363636 100%);
+    background-image: linear-gradient(top, #2f2f2f 0%, #363636 100%);
+}
+
+.display {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    height: 40px;
+    grid-area: display;
+    background-color: #bccd95;
+    border: 1px solid maroon;
+    padding-right: 5%;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+
+#display-text {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    margin-bottom: 0;
+}
+
+#clear {
+    grid-area: clear;
+}
+
+#backspace {
+    grid-area: backspace;
+}
+
+#one {
+    grid-area: one;
+}
+
+#two {
+    grid-area: two;
+}
+
+#three {
+    grid-area: three;
+}
+
+#four {
+    grid-area: four;
+}
+
+#five {
+    grid-area: five;
+}
+
+#six {
+    grid-area: six;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#eight {
+    grid-area: eight;
+}
+
+#nine {
+    grid-area: nine;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#dot {
+    grid-area: dot;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#minus {
+    grid-area: minus;
+}
+
+#division {
+    grid-area: div;
+}
+
+#multiply {
+    grid-area: mult;
+}
+
+#equals {
+    grid-area: equal;
+}
